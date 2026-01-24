@@ -24,6 +24,7 @@ conda-meta/
 # --- Logs e Banco de Dados ---
 *.log
 *.sqlite
+*.db
 .env
 
 # --- Sistema (Ubuntu) ---
