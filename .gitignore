@@ -26,6 +26,7 @@ conda-meta/
 *.sqlite
 *.db
 .env
+metabase_data/
 
 # --- Sistema (Ubuntu) ---
 .DS_Store
