@@ -4,13 +4,20 @@ from recommender import NetflixRecommender
 
 st.set_page_config(page_title="MovieRecommender", layout="centered")
 
-@st.cache_resource
+st.cache_resource
 def get_engine():
     engine = NetflixRecommender()
     engine.load_data()
     
-    with open('data/similarity_matrix.pkl', 'rb') as f:
-        engine.cosine_sim = pickle.load(f)
+    import os
+    matrix_path = 'data/similarity_matrix.pkl'
+    
+    if os.path.exists(matrix_path):
+        with open(matrix_path, 'rb') as f:
+            engine.cosine_sim = pickle.load(f)
+    else:
+        engine.build_recommender()
+        
     return engine
 
 recommender = get_engine()
