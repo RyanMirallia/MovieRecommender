@@ -4,7 +4,7 @@ from recommender import NetflixRecommender
 
 st.set_page_config(page_title="MovieRecommender", layout="centered")
 
-st.cache_resource
+@st.cache_resource
 def get_engine():
     engine = NetflixRecommender()
     engine.load_data()
