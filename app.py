@@ -45,6 +45,6 @@ if escolha:
     
     if isinstance(recomendacoes, list):
         for filme in recomendacoes:
-            st.write(f"✅ {filme}")
+            st.write(f" {filme}")
     else:
         st.error(recomendacoes)
