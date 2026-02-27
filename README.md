@@ -1,4 +1,5 @@
 Projeto: https://ryan-portfolio-movie-recommender.streamlit.app/
+Arquivo csv: https://www.kaggle.com/datasets/shivamb/netflix-shows/data
 
 O projeto utiliza um dataset do Kaggle contendo o catálogo de títulos da Netflix até 2021 para criar um ecossistema de análise e recomendação. O fluxo começa com o tratamento de dados brutos via Pandas, onde limpei inconsistências em campos de elenco, direção e datas. Para garantir uma estrutura mais robusta que um simples CSV, utilizei o SQLAlchemy para persistir esses dados em um banco relacional SQLite.
 
